@@ -23,6 +23,7 @@ enum communication_type {
 	MODE_USBBLASTER,       /*! JTAG probe firmware for USBBLASTER */
 	MODE_CMSISDAP,         /*! CMSIS-DAP JTAG probe */
 	MODE_DFU,              /*! DFU based probe */
+	MODE_PIRATE,           /*! Pirate based probe */
 };
 
 typedef struct {
@@ -63,6 +64,7 @@ static std::map <std::string, cable_t> cable_list = {
 	{"tigard",       		{MODE_FTDI_SERIAL,  {0x0403, 0x6010, INTERFACE_B, 0x08, 0x3B, 0x00, 0x00}}},
 	{"usb-blaster",  		{MODE_USBBLASTER,   {0x09Fb, 0x6001, 0,           0,    0,    0,    0   }}},
 	{"usb-blasterII",		{MODE_USBBLASTER,   {0x09Fb, 0x6810, 0,           0,    0,    0,    0   }}},
+	{"pirate",       {MODE_PIRATE,       {}}},
 };
 
 #endif

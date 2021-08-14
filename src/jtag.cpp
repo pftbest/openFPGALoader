@@ -23,6 +23,7 @@
 #include "cmsisDAP.hpp"
 #endif
 #include "dirtyJtag.hpp"
+#include "pirateJtag.hpp"
 #include "part.hpp"
 #include "usbBlaster.hpp"
 
@@ -107,6 +108,9 @@ void Jtag::init_internal(cable_t &cable, const string &dev, const string &serial
 		_jtag = new CmsisDAP(cable.config.vid, cable.config.pid, _verbose);
 		break;
 #endif
+	case MODE_PIRATE:
+		_jtag = new PirateJtag(clkHZ, _verbose);
+		break;
 	default:
 		std::cerr << "Jtag: unknown cable type" << std::endl;
 		throw std::exception();
