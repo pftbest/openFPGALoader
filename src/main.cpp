@@ -151,7 +151,7 @@ int main(int argc, char **argv)
 	if (args.cable[0] == '-') { /* if no board and no cable */
 		if (args.verbose > 0)
 			cout << "No cable or board specified: using direct ft2232 interface" << endl;
-		args.cable = "ft2232";
+		args.cable = "xvc";
 	}
 
 	/* if args.freq == 0: no user requirement nor board default
