@@ -24,6 +24,7 @@
 #endif
 #include "dirtyJtag.hpp"
 #include "pirateJtag.hpp"
+#include "xvcJtag.hpp"
 #include "part.hpp"
 #include "usbBlaster.hpp"
 
@@ -110,6 +111,9 @@ void Jtag::init_internal(cable_t &cable, const string &dev, const string &serial
 #endif
 	case MODE_PIRATE:
 		_jtag = new PirateJtag(clkHZ, _verbose);
+		break;
+	case MODE_XVC:
+		_jtag = new XvcJtag(clkHZ, _verbose);
 		break;
 	default:
 		std::cerr << "Jtag: unknown cable type" << std::endl;

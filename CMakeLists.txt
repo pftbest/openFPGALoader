@@ -73,6 +73,7 @@ set(OPENFPGALOADER_SOURCE
 	src/dfuFileParser.cpp
 	src/dirtyJtag.cpp
 	src/pirateJtag.cpp
+	src/xvcJtag.cpp
 	src/efinix.cpp
 	src/efinixHexParser.cpp
 	src/fx2_ll.cpp
@@ -120,6 +121,7 @@ set(OPENFPGALOADER_HEADERS
 	src/dfuFileParser.hpp
 	src/dirtyJtag.hpp
 	src/pirateJtag.hpp
+	src/xvcJtag.hpp
 	src/efinix.hpp
 	src/efinixHexParser.hpp
 	src/fx2_ll.hpp
